@@ -1,0 +1,363 @@
+[
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "PhotoSnap Pro",
+    "companyName": "Visionary Labs",
+    "id": 1,
+    "description": "Capture every beautiful moment with PhotoSnap Pro — offering AI-powered editing, filters, and one-tap enhancements to make your photos shine instantly.",
+    "size": 45,
+    "reviews": 1289,
+    "ratingAvg": 4.6,
+    "downloads": 500000,
+    "ratings": [
+      { "name": "1 star", "count": 23 },
+      { "name": "2 star", "count": 45 },
+      { "name": "3 star", "count": 78 },
+      { "name": "4 star", "count": 340 },
+      { "name": "5 star", "count": 803 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "TaskMaster",
+    "companyName": "Efficient Works",
+    "id": 2,
+    "description": "Organize your day, track deadlines, and stay productive with TaskMaster — the ultimate to-do list app with reminders, smart sorting, and daily reports.",
+    "size": 32,
+    "reviews": 980,
+    "ratingAvg": 4.4,
+    "downloads": 420000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 460 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "FitBuddy",
+    "companyName": "CoreMotion Studio",
+    "id": 3,
+    "description": "Track your workouts, monitor calories, and follow personalized fitness plans with FitBuddy. Stay motivated with streaks, challenges, and real-time insights.",
+    "size": 58,
+    "reviews": 2043,
+    "ratingAvg": 4.8,
+    "downloads": 820000,
+    "ratings": [
+      { "name": "1 star", "count": 32 },
+      { "name": "2 star", "count": 51 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 1460 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "NoteWave",
+    "companyName": "WaveSoft",
+    "id": 4,
+    "description": "Create, organize, and share beautiful notes seamlessly. NoteWave lets you sync across all devices, so your ideas are always with you wherever you go.",
+    "size": 27,
+    "reviews": 830,
+    "ratingAvg": 4.5,
+    "downloads": 360000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 430 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "Cookly",
+    "companyName": "KitchenCraft",
+    "id": 5,
+    "description": "Discover thousands of recipes from around the world with step-by-step video guides. Cookly helps you shop smarter and cook tastier every day.",
+    "size": 70,
+    "reviews": 1620,
+    "ratingAvg": 4.7,
+    "downloads": 640000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 900 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "FinancePlus",
+    "companyName": "MoneyTree Systems",
+    "id": 6,
+    "description": "Easily manage your income, expenses, and budgets with FinancePlus. Visual charts and secure syncing help you stay financially in control.",
+    "size": 40,
+    "reviews": 1190,
+    "ratingAvg": 4.3,
+    "downloads": 410000,
+    "ratings": [
+      { "name": "1 star", "count": 45 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 130 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 555 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "LanguageLeap",
+    "companyName": "BrightMind EdTech",
+    "id": 7,
+    "description": "Learn new languages faster with AI-powered lessons, pronunciation help, and real-world practice conversations in LanguageLeap.",
+    "size": 80,
+    "reviews": 2011,
+    "ratingAvg": 4.9,
+    "downloads": 1000000,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 80 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 1591 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "TuneBox",
+    "companyName": "MelodyWorks",
+    "id": 8,
+    "description": "Stream, download, and organize your favorite music all in one place. TuneBox brings high-quality audio and smart recommendations for every mood.",
+    "size": 96,
+    "reviews": 1875,
+    "ratingAvg": 4.7,
+    "downloads": 930000,
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 1280 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "TravelMate",
+    "companyName": "SkyBound Studio",
+    "id": 9,
+    "description": "Plan trips, find hidden gems, and explore destinations with offline maps. TravelMate is your smart guide for adventures worldwide.",
+    "size": 73,
+    "reviews": 1450,
+    "ratingAvg": 4.6,
+    "downloads": 700000,
+    "ratings": [
+      { "name": "1 star", "count": 28 },
+      { "name": "2 star", "count": 45 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 380 },
+      { "name": "5 star", "count": 847 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "MindEase",
+    "companyName": "Serenity Labs",
+    "id": 10,
+    "description": "Reduce stress and improve focus with guided meditations and breathing exercises. MindEase helps you find calm in your daily life.",
+    "size": 41,
+    "reviews": 1670,
+    "ratingAvg": 4.8,
+    "downloads": 890000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 360 },
+      { "name": "5 star", "count": 1145 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "ShopSmart",
+    "companyName": "Dealify Corp",
+    "id": 11,
+    "description": "Compare prices, track discounts, and get the best deals on your favorite products. ShopSmart saves you time and money every day.",
+    "size": 39,
+    "reviews": 1420,
+    "ratingAvg": 4.5,
+    "downloads": 620000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 140 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 740 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "EduConnect",
+    "companyName": "Learnify Systems",
+    "id": 12,
+    "description": "Join live classes, submit assignments, and chat with teachers. EduConnect brings online education to your fingertips.",
+    "size": 64,
+    "reviews": 1780,
+    "ratingAvg": 4.6,
+    "downloads": 950000,
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 480 },
+      { "name": "5 star", "count": 1075 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "WeatherNow",
+    "companyName": "ClimaTech",
+    "id": 13,
+    "description": "Stay ahead of the weather with real-time updates, forecasts, and alerts. WeatherNow provides accurate predictions for any location.",
+    "size": 29,
+    "reviews": 1100,
+    "ratingAvg": 4.4,
+    "downloads": 540000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 160 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 520 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "GameZone",
+    "companyName": "FunBit Interactive",
+    "id": 14,
+    "description": "Discover trending games, join tournaments, and connect with gamers around the world. GameZone makes gaming more social and fun.",
+    "size": 120,
+    "reviews": 2900,
+    "ratingAvg": 4.9,
+    "downloads": 1500000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 2040 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "DailyQuote",
+    "companyName": "InspireWorks",
+    "id": 15,
+    "description": "Get daily inspirational quotes to start your day right. DailyQuote delivers motivation and positivity to your home screen every morning.",
+    "size": 18,
+    "reviews": 620,
+    "ratingAvg": 4.5,
+    "downloads": 280000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 70 },
+      { "name": "4 star", "count": 180 },
+      { "name": "5 star", "count": 310 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "QuickScan",
+    "companyName": "DocuSoft",
+    "id": 16,
+    "description": "Turn your phone into a powerful scanner. QuickScan detects edges, enhances clarity, and saves PDFs instantly with one tap.",
+    "size": 22,
+    "reviews": 970,
+    "ratingAvg": 4.6,
+    "downloads": 470000,
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 110 },
+      { "name": "4 star", "count": 290 },
+      { "name": "5 star", "count": 475 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "SafeVault",
+    "companyName": "Lockify Inc",
+    "id": 17,
+    "description": "Keep your files, photos, and passwords secure with SafeVault. Biometric lock and AES encryption ensure top-tier privacy protection.",
+    "size": 35,
+    "reviews": 1120,
+    "ratingAvg": 4.7,
+    "downloads": 550000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 350 },
+      { "name": "5 star", "count": 605 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "NewsFlash",
+    "companyName": "Global Media Hub",
+    "id": 18,
+    "description": "Stay informed with real-time news updates, trending headlines, and category filters. NewsFlash brings the world to your fingertips.",
+    "size": 55,
+    "reviews": 1320,
+    "ratingAvg": 4.5,
+    "downloads": 610000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 130 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 690 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "StudyPal",
+    "companyName": "BrainFuel Education",
+    "id": 19,
+    "description": "Plan your study schedule, take notes, and review flashcards. StudyPal helps students stay focused and organized throughout the semester.",
+    "size": 46,
+    "reviews": 1550,
+    "ratingAvg": 4.7,
+    "downloads": 720000,
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 955 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
+    "title": "RideGo",
+    "companyName": "UrbanMove",
+    "id": 20,
+    "description": "Book cabs, track rides, and pay securely. RideGo connects you to trusted drivers and ensures safe and fast city travel anytime.",
+    "size": 82,
+    "reviews": 2450,
+    "ratingAvg": 4.8,
+    "downloads": 1300000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 90 },
+      { "name": "3 star", "count": 140 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1660 }
+    ]
+  }
+ 
+]
