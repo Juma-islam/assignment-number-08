@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import MainLayouts from "../Layouts/MainLayouts";
 import Home from "../Pages/Home";
+import AllAppCard from "../Pages/AllAppCard";
 
 const router = createBrowserRouter([
      {
@@ -11,7 +12,12 @@ const router = createBrowserRouter([
           {
     index: true,
     element: <Home></Home>,
-    loader: ()=> fetch('../data.json')
+
+  },
+          {
+    path: '/all-apps',
+    element: <AllAppCard></AllAppCard>,
+
   },
 
     ]
