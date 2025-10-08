@@ -20,9 +20,11 @@ const Home = () => {
     return (
         <div>
             <div className="text-center space-y-3">
-                <h1 className='font-bold text-4xl md:text-6xl lg:text-7xl'>We Build <br /><span className='bg-linear-to-r from-[#9F62F2] to-[#632EE3] bg-clip-text text-transparent'>Productive</span>Apps</h1>
+                <div className="max-w-3xl mx-auto space-y-3">
+                    <h1 className='font-bold text-4xl md:text-6xl lg:text-7xl'>We Build <br /><span className='bg-linear-to-r from-[#9F62F2] to-[#632EE3] bg-clip-text text-transparent'>Productive</span>Apps</h1>
                 <p className='md:text-xl text-gray-600'>AtHERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
-                <div className="flex justify-center items-center gap-2">
+                </div>
+                <div className="flex flex-col md:flex-row justify-center items-center gap-2">
                     <Link to="/google" className='btn outline-btn font-semibold text-xl '><span><img src={googleIcon} alt="" /></span>Google Play</Link>
                     <Link to="app-store" className='btn outline-btn font-semibold text-xl'> <img src={appIcon} alt="" />App Store</Link>
                 </div>

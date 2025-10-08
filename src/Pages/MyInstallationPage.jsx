@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { FaDownload, FaStar } from 'react-icons/fa';
 import { MdReviews } from 'react-icons/md';
 
 const MyInstallationPage = () => {
@@ -39,6 +40,10 @@ totalsByCategory[category]
     
     return (
         <div>
+           <div className="text-center mt-5">
+                <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold'>Your Installed Apps</h1>
+                <p className='text-gray-500 text-sm md:text-[16px] lg:text-xl'>Explore All Trending Apps on the Market developed by us</p>
+            </div>
           <div className='space-y-6'>
           
             <div className="flex justify-between items-center py-10">
@@ -65,10 +70,10 @@ totalsByCategory[category]
     <h2 className="card-title">{p.name}</h2>
     <p>{p.category}</p>
     <div className="card-actions flex gap-5 items-center justify-end">
-<div className="space-y-3">
-            <p className='text-sm md:text-[16px] lg:text-xl text-gray-500 '>{p.downloads}</p>
-            <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{p.reviews} <span className='text-indigo-600'><MdReviews /></span></span>
-        </div>
+ <div className="flex justify-between items-center">
+        <span className='bg-[#F1F5E8] p-2 rounded-md flex justify-center items-center gap-2 text-[#00D390]'><span><FaDownload /></span>{p.downloads}</span>
+        <span className='bg-[#FFF0E1] p-2 rounded-md  flex justify-center items-center gap-2 text-[#FF8811]'> <span><FaStar /></span>{p.ratingAvg}</span>
+    </div>
       <button onClick={()=> handleRemove(p.id)} className="btn bg-[#00D390] text-white">Uninstall</button>
       
     </div>

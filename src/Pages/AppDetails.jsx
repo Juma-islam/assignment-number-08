@@ -4,6 +4,7 @@ import useApps from '../Hooks/useApps';
 import { FaDownload, FaStar } from 'react-icons/fa';
 import { MdReviews } from 'react-icons/md';
   import { ToastContainer, toast } from 'react-toastify';
+import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const AppDetails = () => {
     const {id} = useParams();
@@ -11,7 +12,7 @@ const AppDetails = () => {
     const app = apps.find(a => String(a.id) === id);
     console.log(app)
     if(loading) return <p>loadinggggggg........</p>
-    const {title, companyName, reviews, ratingAvg, downloads, image} = app || {};
+    const {title, companyName, reviews, ratingAvg, downloads, image, description} = app || {};
 
     const handleToAddInstallationPage = ()=>{
          const existingList = JSON.parse(localStorage.getItem('MyInstallationPage'));
@@ -29,14 +30,15 @@ const AppDetails = () => {
 }
   
     return (
-        <div className="hero bg-base-100 min-h-screen shadow-md">
+<div>
+          <div className="hero bg-base-100 min-h-screen shadow-md">
   <div className="grid md:grid-cols-2 lg:grid-cols-2">
     <img
       src={image}
-      className="max-w-sm rounded-lg shadow-2xl"
+      className="max-w-sm rounded-lg shadow-2xl w-80 md:w-auto"
     />
     <div>
-      <h1 className="text-5xl font-bold">{title}</h1>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">{title}</h1>
       <p className="py-6">{companyName}</p> 
       <hr className='bg-indigo-500 h-1 w-full'/>
       <div className="flex justify-center items-center gap-5 space-y-3">
@@ -58,7 +60,38 @@ const AppDetails = () => {
   </div>
   <ToastContainer />
 </div>
+{/* charts */}
+<div className="space-y-3">
+  <h1 className='text-4xl font-semibold'>Ratings</h1>
+  <div className="h-80 bg-base-100 rounded-xl p-4">
+     <ResponsiveContainer width="100%" height="100%">
+      <BarChart
+        data={app.ratings}
+        layout='vertical'
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="count" />
+        <YAxis dataKey="name" type='category'/>
+        <Tooltip />
+        <Legend />
+        {/* <Bar dataKey="pv" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} /> */}
+        <Bar dataKey="count" fill="#82ca9d" />
+      </BarChart>
+    </ResponsiveContainer>
+  </div>
+</div>
+{/* description */}
+<div className="">
+   <h1 className='text-4xl font-semibold'>Description</h1>
+<div className="bg-base-100 p-4 rounded-md">
+  {description}
+</div>
+</div>
+</div>
     );
 };
 
 export default AppDetails;
+
+
+
