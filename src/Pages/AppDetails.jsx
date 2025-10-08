@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router';
 import useApps from '../Hooks/useApps';
 import { FaDownload, FaStar } from 'react-icons/fa';
@@ -7,11 +7,12 @@ import { MdReviews } from 'react-icons/md';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const AppDetails = () => {
+  const [isInstalled , setIsInstalled] = useState(false);
     const {id} = useParams();
     const {apps, loading}= useApps()
     const app = apps.find(a => String(a.id) === id);
     console.log(app)
-    if(loading) return <p>loadinggggggg........</p>
+    if(loading) return <p>loading........</p>
     const {title, companyName, reviews, ratingAvg, downloads, image, description} = app || {};
 
     const handleToAddInstallationPage = ()=>{
@@ -20,13 +21,20 @@ const AppDetails = () => {
   let updatedList = []
   if(existingList){
     const isDuplicate = existingList.some(p=> p.id === app.id);
-    if(isDuplicate) return toast("sorry ")
+    if(isDuplicate) {
+toast(" Already Installed ❌");
+setIsInstalled(true);
+return
+    } 
      updatedList = [...existingList, app]
   }
   else{
     updatedList.push(app)
   }
- localStorage.setItem('MyInstallationPage', JSON.stringify(updatedList))
+ localStorage.setItem('MyInstallationPage', JSON.stringify(updatedList));
+ setIsInstalled(true);
+ toast("Installed Successfully ✔");
+ return
 }
   
     return (
@@ -55,7 +63,8 @@ const AppDetails = () => {
             <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{reviews} <span className='text-indigo-600'><MdReviews /></span></span>
         </div>
       </div>
-      <button onClick={handleToAddInstallationPage} className="btn bg-[#00D390] text-white">Install Now (258MB)</button>
+      {/* disabled={isInstalled} */}
+      <button  onClick={handleToAddInstallationPage} className="btn bg-[#00D390] text-white">{isInstalled ? "Installed" : "Install Now (258MB)"}</button>
     </div>
   </div>
   <ToastContainer />
@@ -75,7 +84,7 @@ const AppDetails = () => {
         <Tooltip />
         <Legend />
         {/* <Bar dataKey="pv" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} /> */}
-        <Bar dataKey="count" fill="#82ca9d" />
+        <Bar dataKey="count" fill="#FF8811" />
       </BarChart>
     </ResponsiveContainer>
   </div>

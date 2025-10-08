@@ -22,8 +22,6 @@ const sortedItem =(
     }
 }
 )();
-
-
 const handleRemove = (id)=>{
 const existingList = JSON.parse(localStorage.getItem('MyInstallationPage'));
 console.log(existingList);
