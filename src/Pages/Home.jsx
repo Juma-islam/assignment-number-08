@@ -1,16 +1,20 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router';
+import { Link } from 'react-router';
 import googleIcon from '../assets/fi_16076057.png'
 import appIcon from '../assets/fi_5977575.png'
 import iPhone from '../assets/Device-Iphone.png'
+import useApps from '../Hooks/useApps';
+import { GiSpaceNeedle } from 'react-icons/gi';
+import AppsCard from './AppsCard';
 // import ellipse from '../assets/Ellipse-24.png'
 // import iPhone from '../assets/Device-Iphone.png'
 // import iPhone from '../assets/Device-Iphone.png'
 
 
 const Home = () => {
-    const data = useLoaderData();
-    console.log(data);
+    const { apps, loading, error} = useApps();
+    const featuredApps = apps.slice(0,8)
+
     
     return (
         <div>
@@ -35,7 +39,7 @@ const Home = () => {
                 </div>
             </div>
             {/* bg-gradiant  */}
-            <div  className="z-20 -mt-86 bg-linear-to-r from-[#9F62F2] to-[#632EE3] absolute   p-10 md:p-20 lg:p-24 text-white space-y-4 w-full">
+            <div  className="z-20 -mt-96 bg-linear-to-r from-[#9F62F2] to-[#632EE3] absolute   p-10 md:p-20 lg:p-24 text-white space-y-4 w-full">
                 <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-5'>Trusted by Millions, Built for You</h1>
                 <div className="grid md:grid-cols-3 gap-3">
                     <div className="">
@@ -56,7 +60,21 @@ const Home = () => {
                 </div>
             </div>
         </div>
-            
+            {/* card  */}
+           <div className="text-center mt-5">
+            <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold'>Trending Apps</h1>
+            <p className='text-gray-600 text-sm md:text-[16px] lg:text-xl'>Explore All Trending Apps on the Market developed by us</p>
+           </div>
+{/* main card  */}
+<div className="my-10 grid md:grid-cols-3 lg:grid-cols-4 gap-4 bg-[#D9D9D9]">
+    {
+        featuredApps.map(app => <AppsCard key={app.id} app={app}></AppsCard>
+)
+    }
+</div>
+
+
+<Link className="text-center btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold " to='/all-apps'>Show All</Link>
         </div>
     );
 };

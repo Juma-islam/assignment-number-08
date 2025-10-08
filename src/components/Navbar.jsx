@@ -18,9 +18,9 @@ const Navbar = () => {
       <li><Link className='font-semibold'  to="/app">Apps</Link></li>
       </ul>
     </div>
-    <div className="flex justify-center items-center ">
+    <div className="flex justify-center items-center gap-2">
        <img className='' src={logoImg} alt="" />
-       <Link to="/" className="btn btn-ghost font-bold bg-linear-to-r from-[#9F62F2] to-[#632EE3] bg-clip-text text-transparent">HERO.IO</Link>
+       <Link to="/" className=" font-bold bg-linear-to-r from-[#9F62F2] to-[#632EE3] bg-clip-text text-transparent">HERO.IO</Link>
     </div>
     
   </div>

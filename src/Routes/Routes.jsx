@@ -6,6 +6,7 @@ const router = createBrowserRouter([
      {
     path: "/",
     element: <MainLayouts/>,
+    hydrateFallbackElement: <p>loading...</p>,
     children: [
           {
     index: true,
