@@ -8,7 +8,7 @@
     "size": 45,
     "reviews": 1289,
     "ratingAvg": 4.6,
-    "downloads": 500000,
+    "downloads": "4M",
     "ratings": [
       { "name": "1 star", "count": 23 },
       { "name": "2 star", "count": 45 },
@@ -26,7 +26,7 @@
     "size": 32,
     "reviews": 980,
     "ratingAvg": 4.4,
-    "downloads": 420000,
+    "downloads": "8M",
     "ratings": [
       { "name": "1 star", "count": 40 },
       { "name": "2 star", "count": 60 },
@@ -44,7 +44,7 @@
     "size": 58,
     "reviews": 2043,
     "ratingAvg": 4.8,
-    "downloads": 820000,
+    "downloads": "3M",
     "ratings": [
       { "name": "1 star", "count": 32 },
       { "name": "2 star", "count": 51 },
@@ -62,7 +62,7 @@
     "size": 27,
     "reviews": 830,
     "ratingAvg": 4.5,
-    "downloads": 360000,
+    "downloads": "4.4M",
     "ratings": [
       { "name": "1 star", "count": 20 },
       { "name": "2 star", "count": 30 },
@@ -80,7 +80,7 @@
     "size": 70,
     "reviews": 1620,
     "ratingAvg": 4.7,
-    "downloads": 640000,
+    "downloads": "6M",
     "ratings": [
       { "name": "1 star", "count": 30 },
       { "name": "2 star", "count": 70 },
@@ -98,7 +98,7 @@
     "size": 40,
     "reviews": 1190,
     "ratingAvg": 4.3,
-    "downloads": 410000,
+    "downloads": "3M",
     "ratings": [
       { "name": "1 star", "count": 45 },
       { "name": "2 star", "count": 60 },
@@ -116,7 +116,7 @@
     "size": 80,
     "reviews": 2011,
     "ratingAvg": 4.9,
-    "downloads": 1000000,
+    "downloads": "8M",
     "ratings": [
       { "name": "1 star", "count": 10 },
       { "name": "2 star", "count": 30 },
@@ -134,7 +134,7 @@
     "size": 96,
     "reviews": 1875,
     "ratingAvg": 4.7,
-    "downloads": 930000,
+    "downloads": "5.5M",
     "ratings": [
       { "name": "1 star", "count": 35 },
       { "name": "2 star", "count": 60 },
@@ -152,7 +152,7 @@
     "size": 73,
     "reviews": 1450,
     "ratingAvg": 4.6,
-    "downloads": 700000,
+    "downloads": "8M",
     "ratings": [
       { "name": "1 star", "count": 28 },
       { "name": "2 star", "count": 45 },
@@ -170,7 +170,7 @@
     "size": 41,
     "reviews": 1670,
     "ratingAvg": 4.8,
-    "downloads": 890000,
+    "downloads": "2.5M",
     "ratings": [
       { "name": "1 star", "count": 25 },
       { "name": "2 star", "count": 40 },
@@ -188,7 +188,7 @@
     "size": 39,
     "reviews": 1420,
     "ratingAvg": 4.5,
-    "downloads": 620000,
+    "downloads": "6.7M",
     "ratings": [
       { "name": "1 star", "count": 60 },
       { "name": "2 star", "count": 80 },
@@ -206,7 +206,7 @@
     "size": 64,
     "reviews": 1780,
     "ratingAvg": 4.6,
-    "downloads": 950000,
+    "downloads": "8M",
     "ratings": [
       { "name": "1 star", "count": 35 },
       { "name": "2 star", "count": 70 },
@@ -224,7 +224,7 @@
     "size": 29,
     "reviews": 1100,
     "ratingAvg": 4.4,
-    "downloads": 540000,
+    "downloads": "7.3M",
     "ratings": [
       { "name": "1 star", "count": 50 },
       { "name": "2 star", "count": 70 },
@@ -242,7 +242,7 @@
     "size": 120,
     "reviews": 2900,
     "ratingAvg": 4.9,
-    "downloads": 1500000,
+    "downloads": "9.2M",
     "ratings": [
       { "name": "1 star", "count": 50 },
       { "name": "2 star", "count": 60 },
@@ -260,7 +260,7 @@
     "size": 18,
     "reviews": 620,
     "ratingAvg": 4.5,
-    "downloads": 280000,
+    "downloads": "1.5M",
     "ratings": [
       { "name": "1 star", "count": 20 },
       { "name": "2 star", "count": 40 },
@@ -278,7 +278,7 @@
     "size": 22,
     "reviews": 970,
     "ratingAvg": 4.6,
-    "downloads": 470000,
+    "downloads": "10M",
     "ratings": [
       { "name": "1 star", "count": 35 },
       { "name": "2 star", "count": 60 },
@@ -286,78 +286,5 @@
       { "name": "4 star", "count": 290 },
       { "name": "5 star", "count": 475 }
     ]
-  },
-  {
-    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
-    "title": "SafeVault",
-    "companyName": "Lockify Inc",
-    "id": 17,
-    "description": "Keep your files, photos, and passwords secure with SafeVault. Biometric lock and AES encryption ensure top-tier privacy protection.",
-    "size": 35,
-    "reviews": 1120,
-    "ratingAvg": 4.7,
-    "downloads": 550000,
-    "ratings": [
-      { "name": "1 star", "count": 25 },
-      { "name": "2 star", "count": 40 },
-      { "name": "3 star", "count": 100 },
-      { "name": "4 star", "count": 350 },
-      { "name": "5 star", "count": 605 }
-    ]
-  },
-  {
-    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
-    "title": "NewsFlash",
-    "companyName": "Global Media Hub",
-    "id": 18,
-    "description": "Stay informed with real-time news updates, trending headlines, and category filters. NewsFlash brings the world to your fingertips.",
-    "size": 55,
-    "reviews": 1320,
-    "ratingAvg": 4.5,
-    "downloads": 610000,
-    "ratings": [
-      { "name": "1 star", "count": 40 },
-      { "name": "2 star", "count": 60 },
-      { "name": "3 star", "count": 130 },
-      { "name": "4 star", "count": 400 },
-      { "name": "5 star", "count": 690 }
-    ]
-  },
-  {
-    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
-    "title": "StudyPal",
-    "companyName": "BrainFuel Education",
-    "id": 19,
-    "description": "Plan your study schedule, take notes, and review flashcards. StudyPal helps students stay focused and organized throughout the semester.",
-    "size": 46,
-    "reviews": 1550,
-    "ratingAvg": 4.7,
-    "downloads": 720000,
-    "ratings": [
-      { "name": "1 star", "count": 35 },
-      { "name": "2 star", "count": 60 },
-      { "name": "3 star", "count": 100 },
-      { "name": "4 star", "count": 400 },
-      { "name": "5 star", "count": 955 }
-    ]
-  },
-  {
-    "image": "https://i.ibb.co.com/XZHKrz9P/photo-1611162617263-4ec3060a058e.jpg",
-    "title": "RideGo",
-    "companyName": "UrbanMove",
-    "id": 20,
-    "description": "Book cabs, track rides, and pay securely. RideGo connects you to trusted drivers and ensures safe and fast city travel anytime.",
-    "size": 82,
-    "reviews": 2450,
-    "ratingAvg": 4.8,
-    "downloads": 1300000,
-    "ratings": [
-      { "name": "1 star", "count": 60 },
-      { "name": "2 star", "count": 90 },
-      { "name": "3 star", "count": 140 },
-      { "name": "4 star", "count": 500 },
-      { "name": "5 star", "count": 1660 }
-    ]
   }
- 
 ]

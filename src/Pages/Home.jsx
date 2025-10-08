@@ -7,6 +7,7 @@ import { GiSpaceNeedle } from 'react-icons/gi';
 import AppsCard from './AppsCard';
 import Banner from './Banner';
 import BannerPhone from './BannerPhone';
+import LoadingSpinner from '../components/LoadingSpinner';
 // import ellipse from '../assets/Ellipse-24.png'
 // import iPhone from '../assets/Device-Iphone.png'
 // import iPhone from '../assets/Device-Iphone.png'
@@ -37,12 +38,12 @@ const Home = () => {
                 <p className='text-gray-500 text-sm md:text-[16px] lg:text-xl'>Explore All Trending Apps on the Market developed by us</p>
             </div>
             {/* main card  */}
-            <div className="my-10 grid md:grid-cols-3 lg:grid-cols-4 gap-4 bg-[#D9D9D9]">
+          {loading ? (<LoadingSpinner/>) : (  <div className="my-10 grid md:grid-cols-3 lg:grid-cols-4 gap-4 bg-[#D9D9D9] overflow-hidden">
                 {
                     featuredApps.map(app => <AppsCard key={app.id} app={app}></AppsCard>
                     )
                 }
-            </div>
+            </div>)}
 
 
            <div className="flex justify-center ">

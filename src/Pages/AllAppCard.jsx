@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import useApps from '../Hooks/useApps';
 import AppsCards from './AppsCards';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const AllAppCard = () => {
     const { apps, loading, error } = useApps();
@@ -18,7 +19,7 @@ const AllAppCard = () => {
                     <input value={search} onChange={(e)=> setSearch(e.target.value) } type="search" placeholder="Search Products" />
                 </label>
             </div>
- <div className="my-10 grid md:grid-cols-3 lg:grid-cols-4 gap-4 bg-[#D9D9D9]">
+ {loading ? (<LoadingSpinner count={16}/>) : (<div className="my-10 grid md:grid-cols-3 lg:grid-cols-4 gap-4 bg-[#D9D9D9] overflow-hidden">
                 {
                     searchedApps.length > 0 ? ( searchedApps.map(app => <AppsCards key={app.id} app= {app}></AppsCards>
 
@@ -27,7 +28,7 @@ const AllAppCard = () => {
                     </div>)
                    
                 }
-            </div>
+            </div>)}
         </div>
           
 

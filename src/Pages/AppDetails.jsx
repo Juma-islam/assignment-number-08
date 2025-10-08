@@ -8,13 +8,15 @@ import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAx
 
 const AppDetails = () => {
   const [isInstalled , setIsInstalled] = useState(false);
+  
     const {id} = useParams();
     const {apps, loading}= useApps()
     const app = apps.find(a => String(a.id) === id);
     console.log(app)
     if(loading) return <p>loading........</p>
     const {title, companyName, reviews, ratingAvg, downloads, image, description} = app || {};
-
+const exsist = JSON.parse(localStorage.getItem('MyInstallationPage'));
+const isDup = exsist.some(p=> p.id === app.id);
     const handleToAddInstallationPage = ()=>{
          const existingList = JSON.parse(localStorage.getItem('MyInstallationPage'));
   console.log(existingList);
@@ -24,6 +26,7 @@ const AppDetails = () => {
     if(isDuplicate) {
 toast(" Already Installed ❌");
 setIsInstalled(true);
+
 return
     } 
      updatedList = [...existingList, app]
@@ -64,7 +67,7 @@ return
         </div>
       </div>
       {/* disabled={isInstalled} */}
-      <button  onClick={handleToAddInstallationPage} className="btn bg-[#00D390] text-white">{isInstalled ? "Installed" : "Install Now (258MB)"}</button>
+      <button  onClick={handleToAddInstallationPage} className="btn bg-[#00D390] text-white">{isDup ? "Installed" : "Install Now (258MB)"}</button>
     </div>
   </div>
   <ToastContainer />
