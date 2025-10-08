@@ -15,10 +15,10 @@ const AppDetails = () => {
     console.log(app)
     if(loading) return <p>loading........</p>
     const {title, companyName, reviews, ratingAvg, downloads, image, description} = app || {};
-const exsist = JSON.parse(localStorage.getItem('MyInstallationPage'));
-const isDup = exsist.some(p=> p.id === app.id);
+const exsist = JSON.parse(localStorage.getItem('MyInstallationPage')) || [];
+const isDup = exsist.some(p=> p.id === app?.id);
     const handleToAddInstallationPage = ()=>{
-         const existingList = JSON.parse(localStorage.getItem('MyInstallationPage'));
+         const existingList = JSON.parse(localStorage.getItem('MyInstallationPage')) || [];
   console.log(existingList);
   let updatedList = []
   if(existingList){

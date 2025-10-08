@@ -65,10 +65,9 @@ totalsByCategory[category]
       alt="Movie" />
   </figure>
   <div className="card-body">
-    <h2 className="card-title">{p.name}</h2>
-    <p>{p.category}</p>
+    <h2 className="card-title">{p.title}</h2> 
     <div className="card-actions flex gap-5 items-center justify-end">
- <div className="flex justify-between items-center">
+ <div className="flex justify-between items-center gap-2">
         <span className='bg-[#F1F5E8] p-2 rounded-md flex justify-center items-center gap-2 text-[#00D390]'><span><FaDownload /></span>{p.downloads}</span>
         <span className='bg-[#FFF0E1] p-2 rounded-md  flex justify-center items-center gap-2 text-[#FF8811]'> <span><FaStar /></span>{p.ratingAvg}</span>
     </div>
