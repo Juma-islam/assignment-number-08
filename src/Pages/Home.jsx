@@ -32,7 +32,7 @@ const Home = () => {
             {/* card  */}
             <div className="text-center mt-5">
                 <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold'>Trending Apps</h1>
-                <p className='text-gray-600 text-sm md:text-[16px] lg:text-xl'>Explore All Trending Apps on the Market developed by us</p>
+                <p className='text-gray-500 text-sm md:text-[16px] lg:text-xl'>Explore All Trending Apps on the Market developed by us</p>
             </div>
             {/* main card  */}
             <div className="my-10 grid md:grid-cols-3 lg:grid-cols-4 gap-4 bg-[#D9D9D9]">
