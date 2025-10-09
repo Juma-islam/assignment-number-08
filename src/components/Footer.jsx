@@ -4,7 +4,7 @@ const Footer = () => {
     return (
 
 <div className="">
-<footer className="footer sm:footer-horizontal bg-neutral  text-neutral-content p-10">
+<footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
   <aside>
     <figure className='flex justify-center items-center gap-2'>
     <img className='' src={logoImg} alt="" /> <span className='text-white'>HERO.IO</span>

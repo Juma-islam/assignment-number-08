@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import logoImg from '../assets/logoImg.png'
 import { FaGithubSquare } from 'react-icons/fa';
+import { NavLink } from 'react-router';
+import { CiHome } from 'react-icons/ci';
 const Navbar = () => {
     return (
        <div className="navbar bg-base-100 shadow-sm container mx-auto">
@@ -25,15 +27,19 @@ const Navbar = () => {
     
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><Link className='font-semibold' to="/">Home</Link></li>
-          <li><Link className='font-semibold'  to="/myInstallation">Installation</Link></li>   
-      <li><Link className='font-semibold'  to="/all-apps">Apps</Link></li>
-    </ul>
+    
+      <nav className="menu menu-horizontal px-1">
+        <li><NavLink className='font-semibold' to="/">Home</NavLink></li>
+          <li><NavLink className='font-semibold'  to="/myInstallation">Installation</NavLink></li>   
+      <li><NavLink className='font-semibold'  to="/all-apps">Apps</NavLink></li>
+      </nav>
+    
   </div>
   <div className="navbar-end">
     
-    <Link to="/github" className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold"><FaGithubSquare className='text-[#632EE3] bg-white rounded-full'/> Contribute</Link>
+    <nav>
+      <NavLink to="/github" className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold"><FaGithubSquare className='text-[#632EE3] bg-white rounded-full'/> Contribute</NavLink>
+    </nav>
   </div>
 </div>
     );

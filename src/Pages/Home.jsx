@@ -14,7 +14,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 
 
 const Home = () => {
-    const { apps, loading, error } = useApps();
+    const { apps, loading } = useApps();
     const featuredApps = apps.slice(0, 8)
 
 

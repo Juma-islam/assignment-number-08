@@ -1,5 +1,5 @@
 
-
+// import loadingImg from '../assets/logo.png'
 const LoadingSpinner = ({count = 8}) => {
     return (
         
@@ -17,7 +17,11 @@ const LoadingSpinner = ({count = 8}) => {
   ))}
   
 </div>
+
     );
 };
 
 export default LoadingSpinner;
+{/* <div className="flex justify-center items-center w-full mx-auto ">
+  <h1 className='text-gray-500 text-7xl'>L<span>{loadingImg}</span>ading</h1>
+</div> */}

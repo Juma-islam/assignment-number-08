@@ -4,7 +4,7 @@ import AppsCards from './AppsCards';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 const AllAppCard = () => {
-    const { apps, loading, error } = useApps();
+    const { apps, loading } = useApps();
     const [search, setSearch] = useState('');
     const term = search.trim().toLocaleLowerCase();
     const searchedApps = term? apps.filter(app => app.title.toLocaleLowerCase().includes(term)) : apps;

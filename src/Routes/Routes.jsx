@@ -8,6 +8,7 @@ import MyInstallationPage from "../Pages/MyInstallationPage";
 import GithubProfile from "../Pages/GithubProfile";
 import GooglePlay from "../Pages/GooglePlay";
 import AppStore from "../Pages/AppStore";
+import ErrorDetailsPage from "../Pages/ErrorDetailsPage";
 
 const router = createBrowserRouter([
      {
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
    {
     path: "/app-store",
     element: <AppStore/>,
+  },
+
+ {
+     path: "/error-details",
+    element: <ErrorDetailsPage/>,
   },
 
     ]

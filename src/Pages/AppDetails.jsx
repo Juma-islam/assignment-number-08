@@ -1,19 +1,34 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router';
+import React, { useEffect, useState } from 'react';
+import {  useNavigate, useParams } from 'react-router';
 import useApps from '../Hooks/useApps';
 import { FaDownload, FaStar } from 'react-icons/fa';
 import { MdReviews } from 'react-icons/md';
   import { ToastContainer, toast } from 'react-toastify';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-
+import loadingImg from '../assets/logoImg.png'
 const AppDetails = () => {
-  const [isInstalled , setIsInstalled] = useState(false);
-  
+
+ 
+    
+  const [_ , setIsInstalled] = useState(false);
+  const navigate = useNavigate()
+  // <p>loading........</p>
     const {id} = useParams();
     const {apps, loading}= useApps()
     const app = apps.find(a => String(a.id) === id);
+    useEffect(() => {
+    
+      if(!loading && !app){
+    navigate('/error-details')
+  }
+  
+ }, [loading ,app , navigate])
     console.log(app)
-    if(loading) return <p>loading........</p>
+    if(loading) return    <div className="flex justify-center items-center w-full mx-auto">
+  <h1 className='text-gray-500 text-7xl flex'>L<img src={loadingImg} alt="" />ading</h1>
+</div>
+  
+ if(!app) return null;
     const {title, companyName, reviews, ratingAvg, downloads, image, description} = app || {};
 const exsist = JSON.parse(localStorage.getItem('MyInstallationPage')) || [];
 const isDup = exsist.some(p=> p.id === app?.id);
@@ -42,7 +57,8 @@ return
   
     return (
 <div>
-          <div className="hero bg-base-100 min-h-screen shadow-md">
+    
+    <div className="hero bg-base-100 min-h-screen shadow-md">
   <div className="grid md:grid-cols-2 lg:grid-cols-2">
     <img
       src={image}
