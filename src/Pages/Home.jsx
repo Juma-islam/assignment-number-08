@@ -26,8 +26,8 @@ const Home = () => {
                 <p className='md:text-xl text-gray-600'>AtHERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
                 </div>
                 <div className="flex flex-col md:flex-row justify-center items-center gap-2">
-                    <Link to="/google-play" className='btn outline-btn font-semibold text-xl '><span><img src={googleIcon} alt="" /></span>Google Play</Link>
-                    <Link to="app-store" className='btn outline-btn font-semibold text-xl'> <img src={appIcon} alt="" />App Store</Link>
+                    <Link to="https://play.google.com/store/games?hl=en" className='btn outline-btn font-semibold text-xl '><span><img src={googleIcon} alt="" /></span>Google Play</Link>
+                    <Link to="https://www.apple.com/app-store/" className='btn outline-btn font-semibold text-xl'> <img src={appIcon} alt="" />App Store</Link>
                 </div>
                <BannerPhone></BannerPhone>
                 <Banner></Banner>

@@ -12,7 +12,6 @@ const AppDetails = () => {
     
   const [_ , setIsInstalled] = useState(false);
   const navigate = useNavigate()
-  // <p>loading........</p>
     const {id} = useParams();
     const {apps, loading}= useApps()
     const app = apps.find(a => String(a.id) === id);

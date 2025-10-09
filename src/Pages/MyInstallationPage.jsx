@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { FaDownload, FaStar } from 'react-icons/fa';
-import { MdReviews } from 'react-icons/md';
+import downloadImg from '../assets/icon-downloads.png'
+import ratingPic from '../assets/icon-ratings.png'
+import reviewPic from '../assets/icon-review.png'
 
 const MyInstallationPage = () => {
     const [installation , setInstallation] = useState([]);
-    const [sortOder, setSortOder] = useState('none')
+    const [sortOder, setSortOder] = useState('none');
+
     useEffect(()=>{
         const savedList = JSON.parse(localStorage.getItem('MyInstallationPage'));
         if(savedList) setInstallation(savedList)
     }, []);
+  
 const sortedItem =(
      ()=>{
     if(sortOder === 'price-asc'){
-        return [...installation].sort((a,b)=> a.size - b.size)
+        return [...installation].sort((a, b)=> a.reviews - b.reviews)
     }
     else if(sortOder === 'price-dsc'){
-         return [...installation].sort((a,b)=> b.size - a.size)
+         return [...installation].sort((a, b)=> b.reviews - a.reviews)
     }
     else{
        return installation
@@ -35,16 +38,15 @@ const totalsByCategory = {}
 const category = product.category
 totalsByCategory[category]
 })
-    
     return (
-        <div>
+        <div className='bg-[#D9D9D9]'>
            <div className="text-center mt-5">
                 <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold'>Your Installed Apps</h1>
                 <p className='text-gray-500 text-sm md:text-[16px] lg:text-xl'>Explore All Trending Apps on the Market developed by us</p>
             </div>
-          <div className='space-y-6'>
+          <div className='space-y-6 '>
           
-            <div className="flex justify-between items-center py-10">
+            <div className="flex justify-between items-center">
                 <h1 className='text-3xl font-semibold'>Installed  {''}<span className='text-sm text-gray-500'>({sortedItem.length}) Apps Found.</span></h1>
 
              <label className='from-control w-full max-w-xs'>
@@ -56,21 +58,31 @@ totalsByCategory[category]
              </label>
 
             </div>
-<div className=" flex flex-col gap-5">
+<div className=" flex flex-col gap-5 pt-10">
     {
-        sortedItem.map(p=> <div className="card card-side bg-base-100 shadow-sm border p-4">
+        sortedItem.map(p=> <div className="card card-side bg-base-100 shadow-sm">
   <figure>
-    <img className='h-36'
+    <img className='h-20'
       src={p.image}
       alt="Movie" />
   </figure>
-  <div className="card-body">
-    <h2 className="card-title">{p.title}</h2> 
-    <div className="card-actions flex gap-5 items-center justify-end">
- <div className="flex justify-between items-center gap-2">
-        <span className='bg-[#F1F5E8] p-2 rounded-md flex justify-center items-center gap-2 text-[#00D390]'><span><FaDownload /></span>{p.downloads}</span>
-        <span className='bg-[#FFF0E1] p-2 rounded-md  flex justify-center items-center gap-2 text-[#FF8811]'> <span><FaStar /></span>{p.ratingAvg}</span>
+  <div className="card-body mt-10">
+    <h2 className="card-title">Forest : {p.title}</h2> 
+    <div className="flex gap-4">
+       <div className="flex gap-2 justify-center items-center">
+      <img className='h-5' src={downloadImg} alt="" />
+      <p className='font-semibold text-[#00D390]'>{p.downloads}</p>
     </div>
+    <div className="flex gap-2 justify-center items-center">
+      <img className='h-5' src={ratingPic} alt="" />
+      <p className='font-semibold text-[#FF8811]'>{p.ratingAvg}</p>
+    </div>
+    <div className="flex gap-2 justify-center items-center">
+      <img className='h-5' src={reviewPic} alt="" />
+      <p className='font-semibold text-[#9F62F2]'>{p.reviews}</p>
+    </div>
+    </div>
+    <div className="card-actions flex gap-5 items-center justify-end">
       <button onClick={()=> handleRemove(p.id)} className="btn bg-[#00D390] text-white">Uninstall</button>
       
     </div>
