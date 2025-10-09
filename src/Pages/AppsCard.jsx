@@ -14,7 +14,7 @@ const AppsCard = ({app}) => {
   <div className="card-body">
     <h2 className="card-title text-center">{app.title}</h2>
     <div className="flex justify-between items-center">
-        <span className='bg-[#F1F5E8] p-2 rounded-md flex justify-center items-center gap-2 text-[#00D390]'><span><FaDownload /></span>{app.downloads}</span>
+        <span className='bg-[#F1F5E8] p-2 rounded-md flex justify-center items-center gap-2 text-[#00D390]'><span><FaDownload /></span>{app.downloads}M</span>
         <span className='bg-[#FFF0E1] p-2 rounded-md  flex justify-center items-center gap-2 text-[#FF8811]'> <span><FaStar /></span>{app.ratingAvg}</span>
     </div>   
   </div>

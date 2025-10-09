@@ -5,11 +5,14 @@ import { FaDownload, FaStar } from 'react-icons/fa';
 import { MdReviews } from 'react-icons/md';
   import { ToastContainer, toast } from 'react-toastify';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import loadingImg from '../assets/logoImg.png'
-const AppDetails = () => {
+import loadingImg from '../assets/logoImg.png';
+import downloadImg from '../assets/icon-downloads.png'
+import ratingPic from '../assets/icon-ratings.png'
+import reviewPic from '../assets/icon-review.png'
 
- 
-    
+
+
+const AppDetails = () => {   
   const [_ , setIsInstalled] = useState(false);
   const navigate = useNavigate()
     const {id} = useParams();
@@ -50,7 +53,7 @@ return
   }
  localStorage.setItem('MyInstallationPage', JSON.stringify(updatedList));
  setIsInstalled(true);
- toast("Installed Successfully ✔");
+ toast.success("Installed Successfully");
  return
 }
   
@@ -65,20 +68,20 @@ return
     />
     <div>
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">{title}</h1>
-      <p className="py-6">{companyName}</p> 
-      <hr className='bg-indigo-500 h-1 w-full'/>
+      <p className="py-6 text-gray-500">Developed by <span className='text-[#632EE3]'>{companyName}.io</span></p> 
+      <hr className='bg-gray-500 border w-full'/>
       <div className="flex justify-center items-center gap-5 space-y-3">
         <div className="space-y-3">
             <p className='text-sm md:text-[16px] lg:text-xl text-gray-500 '>Downloads</p>
-            <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{downloads} <span className='text-indigo-600'><FaDownload /></span></span>
+            <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{downloads}M<img src={downloadImg} alt="" /></span>
         </div>
         <div className="space-y-3">
             <p className='text-sm md:text-[16px] lg:text-xl text-gray-500 '>Average Rating</p>
-            <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{ratingAvg} <span className='text-indigo-600'><FaStar /></span></span>
+            <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{ratingAvg} <img src={ratingPic} alt="" /></span>
         </div>
         <div className="space-y-3">
             <p className='text-sm md:text-[16px] lg:text-xl text-gray-500 '>Total Reviews</p>
-            <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{reviews} <span className='text-indigo-600'><MdReviews /></span></span>
+            <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{reviews} <img src={reviewPic} alt="" /></span>
         </div>
       </div>
       {/* disabled={isInstalled} */}

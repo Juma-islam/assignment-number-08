@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import downloadImg from '../assets/icon-downloads.png'
 import ratingPic from '../assets/icon-ratings.png'
 import reviewPic from '../assets/icon-review.png'
+import { ToastContainer, toast } from 'react-toastify';
 
 const MyInstallationPage = () => {
     const [installation , setInstallation] = useState([]);
@@ -15,14 +16,15 @@ const MyInstallationPage = () => {
 const sortedItem =(
      ()=>{
     if(sortOder === 'price-asc'){
-        return [...installation].sort((a, b)=> a.reviews - b.reviews)
+        return [...installation].sort((a, b)=> a.downloads - b.downloads)
     }
     else if(sortOder === 'price-dsc'){
-         return [...installation].sort((a, b)=> b.reviews - a.reviews)
+         return [...installation].sort((a, b)=> b.downloads - a.downloads)
     }
     else{
        return installation
     }
+    
 }
 )();
 const handleRemove = (id)=>{
@@ -31,22 +33,17 @@ console.log(existingList);
   let updatedList =  existingList.filter(p=> p.id !== id);
   setInstallation(updatedList)
 localStorage.setItem('MyInstallationPage', JSON.stringify(updatedList))
+toast.success("Uninstalled")
 }
- 
-const totalsByCategory = {}
-    installation.forEach(product =>{
-const category = product.category
-totalsByCategory[category]
-})
     return (
         <div className='bg-[#D9D9D9]'>
            <div className="text-center mt-5">
                 <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold'>Your Installed Apps</h1>
                 <p className='text-gray-500 text-sm md:text-[16px] lg:text-xl'>Explore All Trending Apps on the Market developed by us</p>
             </div>
-          <div className='space-y-6 '>
+          <div className='space-y-6 mt-5'>
           
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col md:flex-row gap-2 justify-between items-center">
                 <h1 className='text-3xl font-semibold'>Installed  {''}<span className='text-sm text-gray-500'>({sortedItem.length}) Apps Found.</span></h1>
 
              <label className='from-control w-full max-w-xs'>
@@ -71,7 +68,7 @@ totalsByCategory[category]
     <div className="flex gap-4">
        <div className="flex gap-2 justify-center items-center">
       <img className='h-5' src={downloadImg} alt="" />
-      <p className='font-semibold text-[#00D390]'>{p.downloads}</p>
+      <p className='font-semibold text-[#00D390]'>{p.downloads}M</p>
     </div>
     <div className="flex gap-2 justify-center items-center">
       <img className='h-5' src={ratingPic} alt="" />
@@ -91,6 +88,7 @@ totalsByCategory[category]
     }
 </div>       
         </div>
+        <ToastContainer/>
         </div>
     );
 };

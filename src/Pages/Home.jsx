@@ -8,9 +8,7 @@ import AppsCard from './AppsCard';
 import Banner from './Banner';
 import BannerPhone from './BannerPhone';
 import LoadingSpinner from '../components/LoadingSpinner';
-// import ellipse from '../assets/Ellipse-24.png'
-// import iPhone from '../assets/Device-Iphone.png'
-// import iPhone from '../assets/Device-Iphone.png'
+
 
 
 const Home = () => {
