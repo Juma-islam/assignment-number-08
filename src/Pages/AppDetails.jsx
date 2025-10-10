@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {  useNavigate, useParams } from 'react-router';
 import useApps from '../Hooks/useApps';
-import { FaDownload, FaStar } from 'react-icons/fa';
-import { MdReviews } from 'react-icons/md';
   import { ToastContainer, toast } from 'react-toastify';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import loadingImg from '../assets/logoImg.png';

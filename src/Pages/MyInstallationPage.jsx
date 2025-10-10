@@ -62,7 +62,7 @@ toast.success("Uninstalled")
                 <h1 className='text-gray-500 text-7xl flex'>L<img src={loadingImg} alt="" />ading</h1>
               </div>) : (<div className=" flex flex-col gap-5 pt-10">
     {
-        sortedItem.map(p=> <div className="card card-side bg-base-100 shadow-sm">
+        sortedItem.map(p=> <div key={p.id} className="card card-side bg-base-100 shadow-sm">
   <figure>
     <img className='h-20'
       src={p.image}
