@@ -8,36 +8,36 @@ import MyInstallationPage from "../Pages/MyInstallationPage";
 import ErrorDetailsPage from "../Pages/ErrorDetailsPage";
 
 const router = createBrowserRouter([
-     {
+  {
     path: "/",
-    element: <MainLayouts/>,
+    element: <MainLayouts />,
     errorElement: <ErrorPage></ErrorPage>,
     hydrateFallbackElement: <p>loading...</p>,
     children: [
-          {
-    index: true,
-    element: <Home></Home>,
+      {
+        index: true,
+        element: <Home></Home>,
 
-  },
-  {
-    path: '/all-apps',
-    element: <AllAppCard></AllAppCard>,
-  },
+      },
+      {
+        path: '/all-apps',
+        element: <AllAppCard></AllAppCard>,
+      },
 
-   {
-    path: '/app/:id',
-    element: <AppDetails/>,
-  },
+      {
+        path: '/app/:id',
+        element: <AppDetails />,
+      },
 
-{
-    path: '/myInstallation',
-    element: <MyInstallationPage/>,
-  },
+      {
+        path: '/myInstallation',
+        element: <MyInstallationPage />,
+      },
 
- {
-     path: "/error-details",
-    element: <ErrorDetailsPage/>,
-  },
+      {
+        path: "/error-details",
+        element: <ErrorDetailsPage />,
+      },
 
     ]
   },

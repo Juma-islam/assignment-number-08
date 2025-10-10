@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import {  useNavigate, useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import useApps from '../Hooks/useApps';
-  import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import loadingImg from '../assets/logoImg.png';
 import downloadImg from '../assets/icon-downloads.png'
@@ -10,113 +10,111 @@ import reviewPic from '../assets/icon-review.png'
 
 
 
-const AppDetails = () => {   
-  const [_ , setIsInstalled] = useState(false);
+const AppDetails = () => {
+  const [isInstalled, setIsInstalled] = useState(false);
   const navigate = useNavigate()
-    const {id} = useParams();
-    const {apps, loading}= useApps()
-    const app = apps.find(a => String(a.id) === id);
-    useEffect(() => {
-    
-      if(!loading && !app){
-    navigate('/error-details')
-  }
-  
- }, [loading ,app , navigate])
-    console.log(app)
-    if(loading) return    <div className="flex justify-center items-center w-full mx-auto">
-  <h1 className='text-gray-500 text-7xl flex'>L<img src={loadingImg} alt="" />ading</h1>
-</div>
-  
- if(!app) return null;
-    const {title, companyName, reviews, ratingAvg, downloads, image, description} = app || {};
-const exsist = JSON.parse(localStorage.getItem('MyInstallationPage')) || [];
-const isDup = exsist.some(p=> p.id === app?.id);
-    const handleToAddInstallationPage = ()=>{
-         const existingList = JSON.parse(localStorage.getItem('MyInstallationPage')) || [];
-  console.log(existingList);
-  let updatedList = []
-  if(existingList){
-    const isDuplicate = existingList.some(p=> p.id === app.id);
-    if(isDuplicate) {
-toast(" Already Installed ❌");
-setIsInstalled(true);
+  const { id } = useParams();
+  const { apps, loading } = useApps()
+  const app = apps.find(a => String(a.id) === id);
+  useEffect(() => {
 
-return
-    } 
-     updatedList = [...existingList, app]
+    if (!loading && !app) {
+      navigate('/error-details')
+    }
+
+  }, [loading, app, navigate])
+  if (loading) return <div className="flex justify-center items-center w-full mx-auto">
+    <h1 className='text-gray-500 text-7xl flex'>L<img src={loadingImg} alt="" />ading</h1>
+  </div>
+
+  if (!app) return null;
+  const { title, companyName, reviews, ratingAvg, downloads, image, description } = app || {};
+  const exsist = JSON.parse(localStorage.getItem('MyInstallationPage')) || [];
+  const isDup = exsist.some(p => p.id === app?.id);
+  const handleToAddInstallationPage = () => {
+    const existingList = JSON.parse(localStorage.getItem('MyInstallationPage')) || [];
+    let updatedList = []
+    if (existingList) {
+      const isDuplicate = existingList.some(p => p.id === app.id);
+      if (isDuplicate) {
+        toast(" Already Installed ❌");
+        setIsInstalled(true);
+
+        return
+      }
+      updatedList = [...existingList, app]
+    }
+    else {
+      updatedList.push(app)
+    }
+    localStorage.setItem('MyInstallationPage', JSON.stringify(updatedList));
+    setIsInstalled(true);
+    toast.success("Installed Successfully");
+    return
   }
-  else{
-    updatedList.push(app)
-  }
- localStorage.setItem('MyInstallationPage', JSON.stringify(updatedList));
- setIsInstalled(true);
- toast.success("Installed Successfully");
- return
-}
-  
-    return (
-<div className='container mx-auto'>
-    
-    <div className="hero bg-base-100 min-h-screen shadow-md">
-  <div className="grid md:grid-cols-2 lg:grid-cols-2">
-    <img
-      src={image}
-      className="max-w-sm rounded-lg shadow-2xl w-80 md:w-auto"
-    />
-    <div>
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">{title}</h1>
-      <p className="py-6 text-gray-500">Developed by <span className='text-[#632EE3]'>{companyName}.io</span></p> 
-      <hr className='bg-gray-500 border w-full'/>
-      <div className="flex justify-center items-center gap-5 space-y-3">
-        <div className="space-y-3">
-            <p className='text-sm md:text-[16px] lg:text-xl text-gray-500 '>Downloads</p>
-            <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{downloads}M<img src={downloadImg} alt="" /></span>
+
+  return (
+    <div className='container mx-auto'>
+
+      <div className="hero bg-base-100 min-h-screen shadow-md">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2">
+          <img
+            src={image}
+            className="max-w-sm rounded-lg shadow-2xl w-80 md:w-auto"
+          />
+          <div>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">{title}</h1>
+            <p className="py-6 text-gray-500">Developed by <span className='text-[#632EE3]'>{companyName}.io</span></p>
+            <hr className='bg-gray-500 border w-full' />
+            <div className="flex justify-center items-center gap-5 space-y-3">
+              <div className="space-y-3">
+                <p className='text-sm md:text-[16px] lg:text-xl text-gray-500 '>Downloads</p>
+                <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{downloads}M<img src={downloadImg} alt="" /></span>
+              </div>
+              <div className="space-y-3">
+                <p className='text-sm md:text-[16px] lg:text-xl text-gray-500 '>Average Rating</p>
+                <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{ratingAvg} <img src={ratingPic} alt="" /></span>
+              </div>
+              <div className="space-y-3">
+                <p className='text-sm md:text-[16px] lg:text-xl text-gray-500 '>Total Reviews</p>
+                <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{reviews} <img src={reviewPic} alt="" /></span>
+              </div>
+            </div>
+            {/* disabled={isInstalled} */}
+            <button disabled={isInstalled} onClick={handleToAddInstallationPage} className="btn bg-[#00D390] text-white">{isDup ? "Installed" : "Install Now (258MB)"}</button>
+          </div>
         </div>
-        <div className="space-y-3">
-            <p className='text-sm md:text-[16px] lg:text-xl text-gray-500 '>Average Rating</p>
-            <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{ratingAvg} <img src={ratingPic} alt="" /></span>
-        </div>
-        <div className="space-y-3">
-            <p className='text-sm md:text-[16px] lg:text-xl text-gray-500 '>Total Reviews</p>
-            <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{reviews} <img src={reviewPic} alt="" /></span>
+        <ToastContainer />
+      </div>
+      {/* charts */}
+      <div className="space-y-3">
+        <h1 className='text-4xl font-semibold'>Ratings</h1>
+        <div className="h-80 bg-base-100 rounded-xl p-4">
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              data={app.ratings}
+              layout='vertical'
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="count" />
+              <YAxis dataKey="name" type='category' />
+              <Tooltip />
+              <Legend />
+              {/* <Bar dataKey="pv" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} /> */}
+              <Bar dataKey="count" fill="#FF8811" />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
       </div>
-      {/* disabled={isInstalled} */}
-      <button  onClick={handleToAddInstallationPage} className="btn bg-[#00D390] text-white">{isDup ? "Installed" : "Install Now (258MB)"}</button>
+      {/* description */}
+      <div className="">
+        <h1 className='text-4xl font-semibold'>Description</h1>
+        <div className="bg-base-100 p-4 rounded-md">
+          {description}
+        </div>
+      </div>
     </div>
-  </div>
-  <ToastContainer />
-</div>
-{/* charts */}
-<div className="space-y-3">
-  <h1 className='text-4xl font-semibold'>Ratings</h1>
-  <div className="h-80 bg-base-100 rounded-xl p-4">
-     <ResponsiveContainer width="100%" height="100%">
-      <BarChart
-        data={app.ratings}
-        layout='vertical'
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="count" />
-        <YAxis dataKey="name" type='category'/>
-        <Tooltip />
-        <Legend />
-        {/* <Bar dataKey="pv" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} /> */}
-        <Bar dataKey="count" fill="#FF8811" />
-      </BarChart>
-    </ResponsiveContainer>
-  </div>
-</div>
-{/* description */}
-<div className="">
-   <h1 className='text-4xl font-semibold'>Description</h1>
-<div className="bg-base-100 p-4 rounded-md">
-  {description}
-</div>
-</div>
-</div>
-    );
+  );
 };
 
 export default AppDetails;
