@@ -3,10 +3,10 @@ import { useNavigate, useParams } from 'react-router';
 import useApps from '../Hooks/useApps';
 import { ToastContainer, toast } from 'react-toastify';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import loadingImg from '../assets/logoImg.png';
 import downloadImg from '../assets/icon-downloads.png'
 import ratingPic from '../assets/icon-ratings.png'
 import reviewPic from '../assets/icon-review.png'
+import { RingLoader } from 'react-spinners';
 
 
 
@@ -23,9 +23,7 @@ const AppDetails = () => {
     }
 
   }, [loading, app, navigate])
-  if (loading) return <div className="flex justify-center items-center w-full mx-auto">
-    <h1 className='text-gray-500 text-7xl flex'>L<img src={loadingImg} alt="" />ading</h1>
-  </div>
+  if (loading) return <div className='text-5xl flex items-center justify-center'> <RingLoader color='#9F62F2'/> </div>
 
   if (!app) return null;
   const { title, companyName, reviews, ratingAvg, downloads, image, description } = app || {};
@@ -80,7 +78,6 @@ const AppDetails = () => {
                 <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{reviews} <img src={reviewPic} alt="" /></span>
               </div>
             </div>
-            {/* disabled={isInstalled} */}
             <button disabled={isInstalled} onClick={handleToAddInstallationPage} className="btn bg-[#00D390] text-white">{isDup ? "Installed" : "Install Now (258MB)"}</button>
           </div>
         </div>

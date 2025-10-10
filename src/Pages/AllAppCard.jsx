@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useApps from '../Hooks/useApps';
 import AppsCards from './AppsCards';
 import LoadingSpinner from '../components/LoadingSpinner';
+import { RingLoader } from 'react-spinners';
 
 const AllAppCard = () => {
     const { apps, loading } = useApps();
@@ -27,7 +28,7 @@ const AllAppCard = () => {
                     <input value={search} onChange={(e) => setSearch(e.target.value)} type="search" placeholder="Search Apps" />
                 </label>
             </div>
-            {isSearching && <p className='text-gray-500 text-center text-sm'>Searching....</p>}
+            {isSearching &&  <div className='text-5xl flex items-center justify-center'> <RingLoader color='#9F62F2'/> </div>}
             {loading ? (<LoadingSpinner count={16} />) : (<div className="my-10 grid md:grid-cols-3 lg:grid-cols-4 gap-4 bg-[#D9D9D9] overflow-hidden">
                 {
                     searchedApps.length > 0 ? (searchedApps.map(app => <AppsCards key={app.id} app={app}></AppsCards>

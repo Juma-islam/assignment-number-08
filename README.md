@@ -12,7 +12,7 @@ Hero.io App is a react-based web application that displays a collection of apps 
 2. Tailwind Css
 3. React Icons
 4. React Toastify
-5. LocalStorage
+5. react-spinner
 6. Netlify : for deployment
 
 

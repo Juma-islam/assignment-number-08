@@ -4,7 +4,7 @@ import ratingPic from '../assets/icon-ratings.png'
 import reviewPic from '../assets/icon-review.png'
 import { ToastContainer, toast } from 'react-toastify';
 import useApps from '../Hooks/useApps';
-import loadingImg from '../assets/logoImg.png'
+import { RingLoader } from 'react-spinners';
 
 const MyInstallationPage = () => {
   const [installation, setInstallation] = useState([]);
@@ -57,9 +57,7 @@ const MyInstallationPage = () => {
           </label>
         </div>
         {
-          loading ? (<div className="flex justify-center items-center w-full mx-auto">
-            <h1 className='text-gray-500 text-7xl flex'>L<img src={loadingImg} alt="" />ading</h1>
-          </div>) : (<div className=" flex flex-col gap-5 pt-10">
+          loading ? (<div className='text-5xl flex items-center justify-center'> <RingLoader color='#9F62F2'/> </div>) : (<div className=" flex flex-col gap-5 pt-10">
             {
               sortedItem.map(p => <div key={p.id} className="card card-side bg-base-100 shadow-sm">
                 <figure>
