@@ -17,7 +17,7 @@ const Home = () => {
 
 
     return (
-        <div>
+        <div className='container mx-auto'>
             <div className="text-center space-y-3">
                 <div className="max-w-3xl mx-auto space-y-3">
                     <h1 className='font-bold text-4xl md:text-6xl lg:text-7xl'>We Build <br /><span className='bg-linear-to-r from-[#9F62F2] to-[#632EE3] bg-clip-text text-transparent'>Productive</span>Apps</h1>

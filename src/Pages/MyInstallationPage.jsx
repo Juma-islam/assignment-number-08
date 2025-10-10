@@ -3,10 +3,13 @@ import downloadImg from '../assets/icon-downloads.png'
 import ratingPic from '../assets/icon-ratings.png'
 import reviewPic from '../assets/icon-review.png'
 import { ToastContainer, toast } from 'react-toastify';
+import useApps from '../Hooks/useApps';
+import loadingImg from '../assets/logoImg.png'
 
 const MyInstallationPage = () => {
     const [installation , setInstallation] = useState([]);
     const [sortOder, setSortOder] = useState('none');
+    const {  loading } = useApps();
 
     useEffect(()=>{
         const savedList = JSON.parse(localStorage.getItem('MyInstallationPage'));
@@ -36,7 +39,7 @@ localStorage.setItem('MyInstallationPage', JSON.stringify(updatedList))
 toast.success("Uninstalled")
 }
     return (
-        <div className='bg-[#D9D9D9]'>
+        <div className='bg-[#D9D9D9] container mx-auto' >
            <div className="text-center mt-5">
                 <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold'>Your Installed Apps</h1>
                 <p className='text-gray-500 text-sm md:text-[16px] lg:text-xl'>Explore All Trending Apps on the Market developed by us</p>
@@ -53,9 +56,11 @@ toast.success("Uninstalled")
                 <option value="price-dsc">High-&gt;low</option>
              </select>
              </label>
-
             </div>
-<div className=" flex flex-col gap-5 pt-10">
+            {
+              loading ? (<div className="flex justify-center items-center w-full mx-auto">
+                <h1 className='text-gray-500 text-7xl flex'>L<img src={loadingImg} alt="" />ading</h1>
+              </div>) : (<div className=" flex flex-col gap-5 pt-10">
     {
         sortedItem.map(p=> <div className="card card-side bg-base-100 shadow-sm">
   <figure>
@@ -86,7 +91,9 @@ toast.success("Uninstalled")
   </div>
 </div>)
     }
-</div>       
+</div> )
+            }
+      
         </div>
         <ToastContainer/>
         </div>

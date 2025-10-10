@@ -58,7 +58,7 @@ return
 }
   
     return (
-<div>
+<div className='container mx-auto'>
     
     <div className="hero bg-base-100 min-h-screen shadow-md">
   <div className="grid md:grid-cols-2 lg:grid-cols-2">

@@ -17,7 +17,7 @@ return clearTimeout(id)
     const term = search.trim().toLocaleLowerCase();
     const searchedApps = term? apps.filter(app => app.title.toLocaleLowerCase().includes(term)) : apps;
     return (
-        <div className="">
+        <div className="container mx-auto">
             <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold'>Our All Applications</h1>
             <p className='text-center text-gray-600 text-sm md:text-[16px] lg:text-xl'>Explore All Apps on the Market developed by us. We code for Millions</p>
 
