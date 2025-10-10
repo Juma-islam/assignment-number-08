@@ -11,7 +11,7 @@ import { RingLoader } from 'react-spinners';
 
 
 const AppDetails = () => {
-  const [isInstalled, setIsInstalled] = useState(false);
+  const [_, setIsInstalled] = useState(false);
   const navigate = useNavigate()
   const { id } = useParams();
   const { apps, loading } = useApps()
@@ -35,7 +35,7 @@ const AppDetails = () => {
     if (existingList) {
       const isDuplicate = existingList.some(p => p.id === app.id);
       if (isDuplicate) {
-        toast(" Already Installed ❌");
+         toast(" Already Installed ❌");
         setIsInstalled(true);
 
         return
@@ -78,7 +78,7 @@ const AppDetails = () => {
                 <span className='text-2xl md:text-3xl lg:text-4xl font-bold flex gap-2 justify-center items-center'>{reviews} <img src={reviewPic} alt="" /></span>
               </div>
             </div>
-            <button disabled={isInstalled} onClick={handleToAddInstallationPage} className="btn bg-[#00D390] text-white">{isDup ? "Installed" : "Install Now (258MB)"}</button>
+            <button  onClick={handleToAddInstallationPage} className="btn bg-[#00D390] text-white">{isDup ? "Installed" : "Install Now (258MB)"}</button>
           </div>
         </div>
         <ToastContainer />

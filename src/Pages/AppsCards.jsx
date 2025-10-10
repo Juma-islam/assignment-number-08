@@ -6,8 +6,8 @@ const AppsCards = ({ app }) => {
   return (
     <Link to={`/app/${app.id}`}>
       <div className="card bg-base-100 shadow-sm  hover:scale-105 transition ease-in-out">
-        <figure className='h-56 overflow-hidden'>
-          <img className=' w-full object-cover overflow-hidden'
+        <figure className='h-56 rounded-lg overflow-hidden'>
+          <img className=' px-4 w-full object-cover overflow-hidden'
             src={app.image}
             alt={app.title} />
         </figure>
